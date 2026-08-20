@@ -5,15 +5,18 @@
 
 int main(int argc, char *argv[]) {
 
-    char characters[2048];
+    while(1)
+    { 
+      char characters[2048];
+      printf("$ ");
+      fgets(characters, sizeof(characters), stdin);
     
-    printf("$ ");
-    fgets(characters, sizeof(characters), stdin);
+      // Flush after every printf
+      setbuf(stdout, NULL);
+      characters[strlen(characters) - 1] = '\0';
+      // TODO: Uncomment the code below to pass the first stage
+      printf("%s: command not found", characters);
+    }
     
-  // Flush after every printf
-    setbuf(stdout, NULL);
-    characters[strlen(characters) - 1] = '\0';
-  // TODO: Uncomment the code below to pass the first stage
-   printf("%s: command not found", characters);
-  return 0;
+    return 0;
 }
