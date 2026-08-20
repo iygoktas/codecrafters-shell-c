@@ -10,18 +10,19 @@ int main(int argc, char *argv[]) {
       char characters[2048];
       printf("$ ");
       fgets(characters, sizeof(characters), stdin);
-      if (("%s", characters) == "exit")
+      if (strcmp(characters, "exit"))
       {
         break;
       }
       else
       {
-      // Flush after every printf
-      setbuf(stdout, NULL);
-      characters[strlen(characters) - 1] = '\0';
-      // TODO: Uncomment the code below to pass the first stage
-      printf("%s: command not found\n", characters);
+        setbuf(stdout, NULL);
+        characters[strlen(characters) - 1] = '\0';
+        // TODO: Uncomment the code below to pass the first stage
+        printf("%s: command not found\n", characters);
       }
+      
+      
     }
     
     return 0;
