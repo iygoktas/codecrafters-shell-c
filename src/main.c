@@ -10,6 +10,7 @@ int main(int argc, char *argv[]) {
       char characters[2048];
       printf("$ ");
       fgets(characters, sizeof(characters), stdin);
+      printf("%s", characters);
       if (strcmp(characters, "exit") == 0)
       {
         printf("ADAFDDDFDFADF");
