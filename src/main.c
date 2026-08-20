@@ -16,9 +16,12 @@ int main(int argc, char *argv[]) {
       {
         break;
       }
+      else if (strncmp(characters, "echo ", 5) == 0){
+        printf("%s\n", characters + 5);
+        continue;
+      }
       else
       {
-        // TODO: Uncomment the code below to pass the first stage
         printf("%s: command not found\n", characters);
       }
       
