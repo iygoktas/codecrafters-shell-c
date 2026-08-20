@@ -14,7 +14,6 @@ int main(int argc, char *argv[]) {
       characters[strlen(characters) - 1] = '\0';
       if (strcmp(characters, "exit") == 0)
       {
-        printf("ADAFDDDFDFADF");
         break;
       }
       else
