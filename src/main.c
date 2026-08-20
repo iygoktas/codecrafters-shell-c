@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
       char characters[2048];
       printf("$ ");
       fgets(characters, sizeof(characters), stdin);
-      if (strcmp(characters, "exit"))
+      if (strcmp(characters, "exit") == 0)
       {
         break;
       }
