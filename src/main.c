@@ -12,6 +12,7 @@ int main(int argc, char *argv[]) {
       fgets(characters, sizeof(characters), stdin);
       if (strcmp(characters, "exit") == 0)
       {
+        printf("ADAFDDDFDFADF");
         break;
       }
       else
