@@ -10,15 +10,15 @@ int main(int argc, char *argv[]) {
       char characters[2048];
       printf("$ ");
       fgets(characters, sizeof(characters), stdin);
-      if (strcmp(characters, "exit"))
+      setbuf(stdout, NULL);
+      characters[strlen(characters) - 1] = '\0';
+      if (strcmp(characters, "exit") == 0)
       {
         printf("ADAFDDDFDFADF");
         break;
       }
       else
       {
-        setbuf(stdout, NULL);
-        characters[strlen(characters) - 1] = '\0';
         // TODO: Uncomment the code below to pass the first stage
         printf("%s: command not found\n", characters);
       }
