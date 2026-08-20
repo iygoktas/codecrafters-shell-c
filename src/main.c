@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
       setbuf(stdout, NULL);
       characters[strlen(characters) - 1] = '\0';
       // TODO: Uncomment the code below to pass the first stage
-      printf("%s: command not found", characters);
+      printf("%s: command not found\n", characters);
     }
     
     return 0;
