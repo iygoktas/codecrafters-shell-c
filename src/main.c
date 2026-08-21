@@ -20,9 +20,29 @@ int main(int argc, char *argv[]) {
         printf("%s\n", characters + 5);
         continue;
       }
+      else if 
+      ((strncmp(characters, "type ", 5) == 0)
+      && 
+      ((strcmp(characters + 5, "echo") == 0) 
+      || 
+      (strcmp(characters + 5, "exit") == 0)
+      || 
+      (strcmp(characters + 5, "type") == 0)))
+      {
+        printf("%s is a shell builtin\n", characters + 5);
+        continue;
+      }
       else
       {
-        printf("%s: command not found\n", characters);
+        if (strncmp(characters, "type ", 5) == 0)
+        {
+          printf("%s: not found\n", characters+5);
+        }
+        else
+        {
+          printf("%s: not found\n", characters);
+        }
+        
       }
       
       
